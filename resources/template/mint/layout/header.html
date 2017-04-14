@@ -1,0 +1,54 @@
+<div class="navbar" role="navigation">
+    <div class="container">
+		<ul class="social">
+			<li class="facebook"><a href="https://www.facebook.com/urbancactus" target="_blank">Facebook</a></li>
+		</ul>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand visible-xs" href="#">Urban Cactus</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav" id="main_menu">              
+				<li class="home">
+					<a href="/home" title="Home" data-page="home">Home</a></li><li class="menu">
+					<a href="/menu" title="Menu" data-page="menu">Menu</a></li><li class="urban-cactus hidden-xs">
+					<a href="/" title="Urban Cactus" data-page="index">Urban Cactus</a></li><li class="about-us">
+					<a href="/about-us" title="About Us" data-page="about-us">About Us</a></li><li class="location">
+					<a href="/location" title="Location" data-page="location">Location</a></li>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+{% if page == 'home' %}
+	<div id="hidden_menu" class="navbar navbar-fixed-top {{page.local}}">
+		<div class="container">
+			<ul class="social">
+				<li class="facebook"><a href="https://www.facebook.com/urbancactus?fref=ts" target="_blank">Facebook</a></li>
+			</ul>
+	       <div class="navbar-header">
+	           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	               <span class="sr-only">Toggle navigation</span>
+	               <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	           </button>
+	            <a class="navbar-brand visible-xs" href="#">Urban Cactus</a>
+	       </div>
+	       <div class="collapse navbar-collapse">
+	           <ul id="auxiliar_menu" class="nav navbar-nav">
+					<li class="home"><a href="/home" title="Home" data-page="home">Home</a></li><li class="menu">
+						<a href="/menu" title="Menu" data-page="menu">Menu</a></li><li class="urban-cactus hidden-xs">
+						<a href="/index" title="Urban Cactus" data-page="index">Urban Cactus</a></li><li class="about-us">
+						<a href="/about-us" title="About Us" data-page="about-us">About Us</a></li><li class="location">
+						<a href="/location" title="Location" data-page="location">Location</a></li>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div>
+
+{% endif %}
+
+

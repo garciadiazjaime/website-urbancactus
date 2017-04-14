@@ -1,0 +1,141 @@
+{% extends 'layout/base.html' %}
+{% block site_wrapper %}
+	<div id="first_block">
+		<h1 class="hidden">Urban cactus - Healthy mexican eatery </h1>
+		<div id="home_slider" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators container">
+				<li data-target="#home_slider" data-slide-to="0" class="active"></li>
+				<li data-target="#home_slider" data-slide-to="1"></li>
+				<li data-target="#home_slider" data-slide-to="2"></li>
+				<li data-target="#home_slider" data-slide-to="3"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div id="sld_healthy" class="item active">
+					<div class="container">
+						<div class="big_phrase"><p><span>The healthy<br /> side of<br /> mexican food</span></p></div>
+					</div>
+				</div>
+				<div id="sld_guacamole" class="item">
+					<div class="container">
+						<div class="big_phrase"><p><span>Guacamole <br /> lovers<br /> eat here</span></p></div>
+					</div>
+				</div>
+				<div id="sld_fast" class="item">
+					<div class="container">
+						<div class="big_phrase"><p><span>Healthy.<br />Fast.<br /> Delicious.</span></p></div>
+					</div>
+				</div>
+				<div id="sld_no-regrets" class="item active">
+					<div class="container">
+						<div class="big_phrase"><p><span>So healthy<br /> you won't<br /> regret it</span></p></div>
+					</div>
+				</div>
+			</div>
+			<div class="decor"></div>
+		</div>
+	
+		
+	</div>
+	
+	
+	<div id="green_area_letter">
+		<h2>Tacos</h2>
+		<p>Delicious organic corn tortillas cooked on a griddle 
+		on site, stuffed with the filling of your choice. 
+		
+		<em>Gluten Free</em></p>
+		<hr class="small_line first" />
+		
+		<a href="https://www.facebook.com/urbancactus?fref=ts" title="Follow us on facebook" target="_blank" id="follow_us_facebook"><span  class="decor">Follow us on facebook <span class="icon facebook"></span></span></a>
+		
+		<hr class="small_line" />
+		
+		<p id="check_menu"><a href="/menu" title="Check out our menu">Check out our menu</a></p>
+	</div>
+	<div id="index_menu" class="brown_background">
+		<ul class="images_square_list small_container">
+			<li id="list_tacos">
+				<a href="/menu/tacos" title="Gorditas" class="wrap">
+					<span class="text ">
+						Tacos
+					</span>
+					<span class="image_brown"></span>
+					<span class="image_green"></span>
+				</a>
+			</li><li id="list_burritos">
+				<a href="/menu/burritos" title="Burritos" class="wrap">
+					<span class="text ">
+						Burritos
+					</span>
+					<span class="image_brown"></span>
+					<span class="image_green"></span>
+				</a>
+			</li><li id="list_plate">
+				<a href="/menu/plate" title="Melted Bowls" class="wrap">
+					<span class="text ">
+						Plate
+					</span>
+					<span class="image_brown"></span>
+					<span class="image_green"></span>
+				</a>
+			</li><li id="list_salads">
+				<a href="/menu/salads" title="Salads" class="wrap">
+					<span class="text ">
+						Salads
+					</span>
+					<span class="image_brown"></span>
+					<span class="image_green"></span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div id="index_menu_light">
+		<ul id="arrow_square_list" class="small_container">
+			<li id="list_fillings">
+				<a href="/menu/fillings" title="Fillings" class="wrap">
+					<span>
+						Fillings
+						<span class="decor"></span>
+					</span>
+				</a>
+			</li><li id="list_ingredients">
+				<a href="/menu/ingredients" title="Ingredients" class="wrap">
+					<span>
+						Ingredients
+						<span class="decor"></span>
+					</span>
+				</a>
+			</li>
+		</ul>
+		<p id="our_story"><a href="/about-us/history" title="Our story">Our <span>story</span>
+		<span class="decor"></span></a></p>
+	</div>	
+	<div id="home_commitment">
+		<div class="small_container">
+			<h2><a href="/about-us/commitment">Commitment</a></h2>
+			<p>Urban Cactus is committed to promote healthy eating habits by incorporating high quality ingredients and low-fat recipes without sacrificing affordability and the distinctive flavors of our rich Mexican culinary heritage.</p>
+			
+			<p class="more"><a href="/about-us/commitment" title="Know more about our commitment">Know more</a></p>
+		</div>
+	</div>
+	<div id="location" class="brown_background">
+		<div class="small_container">
+			<div class="row">
+				<div  class="col-sm-5 col-xs-12">
+					<div class="wrap">
+						<h2><a href="/location">Location</a></h2>
+						<p class="first">3070 W. Chapman Ave. 
+						Suite C<br />
+						Orange CA, 92868</p>
+						<p><a href="tel:7149783000" title="Call us" class="telephone">(714) 978-3000</a></p>
+					</div>
+				</div>
+				<div class="col-sm-7 hidden-xs">
+					<div id="index_map">
+						<a href="/location" title="See location in google maps"><span>See Google maps</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

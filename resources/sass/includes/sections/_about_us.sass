@@ -1,0 +1,203 @@
+body.about_us
+	background-image: url(#{$img}green_dust.png)
+	color: #675e61
+	
+	h1
+		background: url(#{$img}decor_light_green.png) center bottom no-repeat
+		color: #f37e63
+		@extend %museo
+		font-size: 131px
+		margin: 0 auto
+		padding: 0 0 25px
+		text-align: center
+		
+	h2
+		color: #675e61
+		@extend %gotham_bold
+		font-size: 18px
+		margin: 0 0 20px
+		
+	#first_block
+		background: #675e61
+		margin: 0 0 90px
+		padding: 40px 10px
+	
+	.small_container
+		max-width: 930px	
+
+	
+#about_map
+	background: url(#{$img}about_map.png) left top no-repeat
+	display: inline-block
+	height: 551px
+	margin: -130px 0 0
+	width: 666px
+	
+	
+#about_pictures
+	background: url(#{$img}about_pictures.png) left top no-repeat
+	display: inline-block
+	height: 624px
+	margin: -110px 0 0 -35px
+	width: 477px
+	
+#history
+	margin: 0 0 70px
+	text-align: right
+	
+	blockquote
+		margin: 70px -35px 80px 0
+	
+blockquote
+	background: url(#{$img}quote_left.png) left top no-repeat
+	border: none
+	color: #675e61
+	@extend %gotham_bold
+	font-size: 39px
+	line-height: 1em
+	padding: 5px 0 0 35px
+	text-transform: lowercase
+
+blockquote.right
+	background: url(#{$img}quote_right.png) right top no-repeat
+	margin: 10px -35px 20px 0
+	padding: 5px 35px 0 0
+	
+#philosophy
+	background: url(#{$img}vegetables_backgroundv2.png) center top no-repeat
+	font-size: 18px
+	margin: -60px 0 100px
+	padding: 700px 0 0
+	text-align: center
+	
+	h2
+		color: #f37e63
+		@extend %gotham_bold
+		font-size: 76px
+		line-height: 0.9em
+		text-transform: uppercase
+
+#big_logo
+	background: url(#{$img}big_logo.png) top left no-repeat
+	display: block
+	height: 82px
+	margin: 110px auto 0
+	max-width: 90%
+	width: 502px
+	
+#about_slider
+	position: relative
+	
+	.carousel-inner
+		background: url(#{$img}about_slider/vista_entrada.jpg) center top no-repeat
+		background-size: cover
+		height: 390px
+		
+	.item
+		min-height: 450px
+		padding: 160px 0 40px
+		
+	li	
+		background-size: cover
+		
+	#sld_entrada
+		background: url(#{$img}about_slider/vista_entrada.jpg) center top no-repeat
+	
+	#sld_mostrador	
+		background: url(#{$img}about_slider/vista_mostrador.jpg) center top no-repeat
+	
+	#sld_bascula	
+		background: url(#{$img}about_slider/vista_bascula.jpg) center top no-repeat
+		
+	#sld_duenos
+		background: url(#{$img}about_slider/vista_duenos.jpg) center top no-repeat
+		
+	
+	p
+		background: url(#{$img}decor_big_yellow.png) center bottom no-repeat
+		color: #e5e97e
+		@extend %gotham_med
+		font-size: 80px
+		left: 50%
+		padding:  0 0 40px
+		position: absolute
+		margin: 0 0 0 -50%
+		pointer-events: none
+		text-align: center
+		text-transform: uppercase
+		top: 120px
+		width: 100%
+		z-index: 7
+		
+		
+	.top_decor, .bottom_decor
+		background: url(#{$img}brown_line_decor.png) center top no-repeat
+		background-size: 100% 18px
+		bottom: -8px
+		height: 18px
+		position: absolute
+		max-width: 100%
+		width: 1582px
+		
+	.top_decor
+		bottom: auto
+		top: -10px
+		
+#about_quote_area
+	background: #f4faf3 url(#{$img}cooking_pan.jpg) center 140px no-repeat
+	padding: 90px 0 90px
+	
+	.small_container
+		max-width: 660px
+	
+		blockquote
+			background: transparent url(#{$img}decor_yellow_bottom.png) center bottom no-repeat
+			@extend %gotham_med
+			font-size: 25px
+			padding: 0
+			text-align: center
+			text-transform: none
+			
+			span
+				color: #f37e63
+				display: block
+				font-size: 19px
+				padding: 20px 0 40px
+				text-transform: uppercase
+				
+	
+	p
+		margin: 0
+		
+#commitment
+	background: url(#{$img}commitment_background.jpg) center top no-repeat
+	background-size: cover
+	color: #dbecd4
+	padding: 80px 0 90px
+	text-align: justify
+	
+	h2
+		background: url(#{$img}decor_small_yellow.png) center bottom no-repeat
+		color: #f37e63
+		@extend %museo
+		font-size: 35px
+		margin: 0 0 40px
+		padding: 0 0 30px
+		text-align: center
+		text-transform: uppercase
+	
+	.small_container
+		max-width: 860px
+		
+	p
+		@extend %gotham_light
+		font-size: 19px
+		
+		a
+			color: #dbecd4
+			@extend %gotham_med
+			
+			&:hover
+				color: lighten(#dbecd4, 10)
+				text-decoration: none
+		

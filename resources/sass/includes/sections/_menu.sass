@@ -1,0 +1,922 @@
+body.menu
+	background: #675E61
+	
+	h2
+		color: #675e61
+		@extend %museo
+		font-size: 27px
+		letter-spacing: .2em
+		text-align: center
+		text-transform: uppercase
+		
+	
+	.small_container
+		max-width: 930px
+	
+	#wrapper
+		ul
+			list-style-type: none
+			
+			em
+				font-style: normal
+
+		#submenu_the_menu
+			background: #675e61
+			padding: 0
+			position: fixed
+			text-align: center
+			top: 88px
+			opacity: 1
+			@include transition(opacity 0.5s)
+			width: 100%
+			z-index: 10
+
+			ul
+				margin: 0 auto
+				padding: 20px 0 10px
+				@include transition(padding 0.3s)
+
+			li
+				background: url(#{$img}submenu_green_line.png) right 5px no-repeat
+				display: inline-block
+				padding: 0
+				vertical-align: top
+
+				span
+					border-right: 1px solid #dbecd4
+					display: inline-block
+					padding: 0 10px
+
+			a		
+				color: #dbecd4
+				display: block
+				padding: 0 18px 20px 15px
+				@include transition(padding 0.3s)
+
+				&:hover
+					background: url(#{$img}submenu_decor_background.png) center bottom no-repeat
+					text-decoration: none
+					
+			
+
+		#submenu_the_menu.subtle
+			opacity: .15
+
+			&:hover
+				opacity: 1
+			ul
+				padding: 5px 0
+			a
+				padding: 0 18px 6px 15px
+
+span.orange_decor, span.yellow_decor
+	background: #f37e63
+	display: block
+	height: 3px
+	margin: 10px auto 0
+	padding: 0
+	width: 40px
+	
+span.yellow_decor
+	background: #e5e97e
+
+	
+#menu_slider.carousel
+	.carousel-indicators
+		text-align: center
+		width: 100%
+
+
+#menu_gorditas 
+	h3 	
+		span.orange_decor
+			background: #f37e63
+			display: block
+			height: 3px
+			margin: 10px auto 0
+			padding: 0
+			width: 40px
+	
+.menu
+	#first_block
+		position: relative
+		text-align: center
+		z-index: 1
+		
+		h3, p
+			color: #fff
+			font-size: 74px
+			margin: 0
+			text-transform: uppercase
+			@include text-shadow(2px 2px 5px #515050)
+			
+		.decor
+			background: url(#{$img}brown_line_decor.png) center top no-repeat
+			background-size: 100% 18px
+			bottom: -8px
+			height: 18px
+			position: absolute
+			max-width: 100%
+			width: 1582px
+			
+		#menu_slider
+			background: url(#{$img}banner/menu_burros.jpg) center top no-repeat
+			background-size: cover
+			margin: 70px 0 0
+			position: relative
+			
+			.item
+				background: url(#{$img}banner/menu_burros.jpg) center top no-repeat
+				background-size: cover
+				height: 441px
+				padding: 100px 0 20px
+				
+			ol
+				left: 0
+				margin: 0
+				padding: 0
+				right: auto
+				
+			#sld-men_tortilla
+				background-image: url(#{$img}banner/menu_tortilla.jpg)
+				
+			#sld-men_salad
+				background-image: url(#{$img}banner/menu_salad.jpg)
+				
+			#sld-men_tacos
+				background-image: url(#{$img}banner/menu_tacos.jpg)
+
+		
+#menu_intro
+	color: #675e61
+	font-size: 20px
+	padding: 90px 0 20px
+	text-align: center
+	
+	.small_container
+		font-size: 16px
+		margin: 0 auto 40px
+		max-width: 95%
+		width: 730px
+	
+	h1, h2, h3
+		@extend %museo
+	
+	h1
+		background: url(#{$img}decor_yellow_bottom.png) center bottom no-repeat
+		color: #675e61
+		font-size: 69px
+		margin: 0 0 30px
+		padding: 0 0 30px
+		text-transform: uppercase
+		
+	h2, h3 
+		color: #675e61
+		font-size: 30px
+		margin: 70px 0 40px
+		text-transform: uppercase
+		
+	h3
+		margin: 40px 0 30px
+		padding: 45px 0 20px
+		
+		span
+			background: url(#{$img}decor_yellow_top.png) center 60px no-repeat
+			display: inline-block
+			padding: 82px 150px 0
+			position: relative
+			
+		.orange_decor
+			background: #f37e63
+			display: block
+			height: 2px
+			padding: 0
+			width: 22px
+
+	#fillings_title
+		background: url(#{$img}melted_bowls_background.jpg) center 73px no-repeat
+		margin: 10px 0 30px
+		
+		.arrow
+			background: url(#{$img}sprite_menu.png) 0 0 no-repeat
+			height: 132px
+			padding: 0
+			position: absolute
+			width: 124px
+			
+		.left
+			left: 0
+			top: 0
+			
+		.right
+			background-position: -28px -152px
+			right: 0
+			top: 0
+				
+.food_menu
+	color: #675e61
+	font-size: 11px
+	padding: 0
+	
+	li, li.first	
+		background: url(#{$img}menu_icons.png) -125px 27px no-repeat
+		padding: 0 0 0 45px
+		
+	em
+		display: block
+		@extend %gotham_med
+		font-size: 14px
+		padding: 0 0 7px
+		text-transform: uppercase
+		
+	span
+		color: #f37e63
+		display: block
+		@extend %gotham_med
+		font-size: 12px
+		text-align: right
+		text-transform: uppercase
+	
+	.wrap
+		border-bottom: 1px solid #cecece
+		min-height: 125px
+		padding: 20px 0
+		
+	.prices_title	
+		@extend %gotham_med
+		font-size: 10px
+		letter-spacing: 0
+		margin: 0 0 20px
+		text-align: center
+		
+		.col-sm-2
+			padding-right: 0
+	
+		
+#fillings
+	padding: 0 0 50px
+	position: relative
+	
+	.decor
+		background: url(#{$img}sprite_menu.png) -240px 0 no-repeat
+		height: 9px
+		left: 50%
+		margin: 0 0 0 -23px
+		position: absolute
+		bottom: 10px
+		width: 46px		
+		
+	ul.first
+		li
+			background-position: -124px 27px
+			padding: 0 0 0 45px
+			
+		li.first
+			background-position: -124px 75px
+		
+	li.yellow_chile
+		background-position: -112px -132px
+		
+		
+	li.vegetarian
+		background-position: -113px -300px
+		
+	li.h-vegetarian
+		background-position: -111px -457px
+	
+	li.yellow_chile.h-vegetarian
+		background-position: -78px -630px
+		
+	
+#sides
+	color: #675e61
+	@extend %gotham_med
+	font-size: 14px
+	padding: 0 0 70px
+
+	.small_container
+		max-width: 405px
+		
+	h2
+		margin: 0 0 20px
+		padding: 40px 0 20px
+		position: relative
+		
+		.decor
+			background: #f37e63
+			bottom: 0
+			display: block
+			height: 1px
+			left: 50%
+			margin: 0 0 0 -11px
+			position: absolute
+			width: 22px
+		
+	p
+		color: #675e61
+		text-align: center
+	
+	.price
+		border: none
+		color: #f37e63
+		float: right
+		overflow: visible
+		padding: 0 10px 0 0
+		text-align: left
+		width: 65px
+
+	.list-holder
+		span
+			position: relative
+		.price
+			position: absolute
+			right: 0
+			top: 14px
+		
+	ul
+		@extend %gotham_med
+		margin-bottom: 0
+		padding: 0 0 50px
+		text-transform: uppercase
+		
+		li
+			background: url(#{$img}menu_icons.png)  -119px -307px no-repeat
+			font-size: 14px
+			padding: 0 0 0 55px
+		
+		span
+			border-bottom: 1px solid #cecece
+			display: block
+			overflow: hidden
+			padding: 14px 0
+			
+		li.h-vegetarian
+			background-position: -119px -464px
+
+		ul
+			color: #F48365
+			@extend %gotham_book
+			margin: 0
+			padding: 0
+			text-transform: none
+
+			li
+				background: transparent
+				padding: 0
+
+			em
+				@extend %gotham_bold
+
+
+#salads_salsas
+	.wrap
+		border-bottom: 1px solid #675e61
+#salads_salsas, #beverages_desserts
+	background: #98bd74
+	overflow: hidden
+	
+	.food_menu
+		color: #fff
+
+#beverages_desserts
+	background: #f0efef
+		
+#salads, #salsas, #beverages, #desserts
+
+	h2
+		background: url(#{$img}small_white_decor.png) center top no-repeat
+		color: #e5e97e
+		padding: 20px 0 0
+	
+	.two_block_wrap
+		margin: 0 0 0 auto
+		max-width: 445px
+		min-height: 690px
+		width: 97.5%
+		
+	.food_menu
+		color: #fff
+		
+		span
+			color: #f37e63
+			
+		em
+			color: #e5e97e
+			
+			span.normal_case
+				color: #e5e97e
+				display: inline-block
+				text-transform: none
+		
+	li
+		.wrap
+			min-height: 1px
+			
+	
+#salads, #salsas
+	.two_block_wrap
+		padding-top: 20px
+		
+#salsas, #desserts
+	background: #f37e63
+
+	.two_block_wrap
+		margin: 0 auto 0 0
+
+#salsas
+	background: #f37e63 url(#{$img}salsas_background.jpg) left 40px no-repeat
+	
+	h2
+		margin-bottom: 80px
+	
+	.food_menu
+		
+		li
+			padding: 0 0 0 85px
+			
+		li.hot-chile
+			background-position: -85px -2075px
+			
+		li.chile
+			background-position: -85px -2526px
+			
+		li.mild-chile
+			background-position: -85px -2321px
+
+#salads
+	background: url(#{$img}salads_background.jpg) right 60px no-repeat
+	
+	.center
+		text-align: center
+	
+	h2
+		background-position: 98px top
+		display: inline-block
+		padding-left: 50px 
+		position: relative
+		
+		.gf_icon
+			background: url(#{$img}sprite_menu.png) -240px -71px no-repeat
+			display: block
+			height: 38px
+			left: 0
+			position: absolute
+			top: 16px
+			width: 37px
+			
+	
+	.prices_title
+		font-size: 12px
+		text-align: center
+		text-transform: uppercase
+	
+	p
+		color: #675e61
+		font-size: 11px
+		margin: 0 auto
+		max-width: 225px
+		position: relative
+		right: -15px
+		text-align: center
+	
+	.add_paragraph
+		border: 1px solid #675e61
+		border-width: 1px 0
+		margin: 40px 0 0 45px
+		max-width: 100%
+		padding: 10px 0
+		position: static
+		text-align: left
+	
+	
+	.food_menu.first
+		font-size: 10px
+		
+		li
+			background-position: -126px -1454px
+			padding: 0 0 0 45px
+			
+		li.first
+			background-position: -126px -1416px
+			
+		
+		span
+			color: #e5e97e
+			font-size: 13px
+			text-align: center
+			
+		
+
+		span.allergy_alert
+			color: #675e61
+			@extend %gotham_book
+			font-size: 11px
+			margin: 10px 0 0
+			text-align: left
+			
+		em
+			color: #675e61
+			
+		li.allergy.h-vegetarian
+			background-position: -126px -1219px
+			
+			
+		li.gf.vegetarian
+			background-position: -74px -1455px
+			
+		li.gf
+			background-position: -74px -1672px
+			
+		li.gf.h-vegetarian
+			background-position: -74px -1871px
+
+#beverages, #desserts
+	.two_block_wrap
+		min-height: 980px
+	
+	h2
+		margin-top: 40px
+
+#beverages
+	background: #dbecd4 url(#{$img}beverages_background.jpg) right bottom no-repeat
+	padding-bottom: 60px
+
+	h2
+		background-image: url(#{$img}small_brown_decor.png)
+		color: #f37e63
+
+	.food_menu
+		color: #675e61
+
+		.wrap
+			padding: 7px 0
+		em
+			color: #675e61
+			
+		li
+			background-position: -150px -2719px
+			padding: 0 0 0 30px
+
+	.food_menu.has-title.first, .food_menu.first
+		.wrap
+			padding: 5px 0 0
+
+		li
+			background-position: -150px -2732px
+
+	.food_menu.has-title
+		li:first-child
+			background: transparent
+
+			.wrap
+				border: none
+				padding: 0
+		
+	.price
+		color: #F37E63
+		font-size: 14px
+		@extend %gotham_med
+		letter-spacing: -0.08em
+
+	h3
+		color: #F37E63
+		@extend %gotham_bold
+		font-size: 18px
+		text-transform: uppercase
+
+#desserts
+	background: #675e61
+	
+	.food_menu
+	
+		li
+			background-position: -90px -3193px
+			padding: 0 0 0 85px
+
+			.wrap
+				border-color: #dbecd4
+	
+		li.h-vegetarian
+			background-position: -90px -2908px
+			
+		li.gf.h-vegetarian
+			background-position: -90px -3053px
+			
+		li.vegetarian
+			background-position: -90px -3331px
+
+	.two_block_wrap
+		min-height: 700px
+			
+#ingredients
+	background: #e5e97e
+	color: #675e61
+	padding: 20px 0 90px
+
+	h2
+		border-bottom: 1px solid #675e61
+		color: #f37e63
+		font-size: 30px
+		padding: 0 0 20px
+		text-align: center
+
+	h3
+		background: url(#{$img}down_arrow_decor.png) right 12px no-repeat
+		border-bottom: 1px solid #675e61
+		color: #675e61
+		@extend %museo
+		font-size: 20px
+		margin: 0 0 20px
+		padding: 10px 0 25px
+		text-transform: uppercase
+		
+	h4
+		@extend %gotham_bold
+		font-size: 14px
+		margin: 40px 0 15px
+		
+	h3.orange
+		background: transparent
+		border: none
+		color: #f37e63
+		@extend %gotham_bold
+		font-size: 14px
+		margin: 50px 0 15px
+		padding: 0
+		text-transform: uppercase
+		
+	.wrap
+		margin: 0 auto
+		width: 96%
+		
+	.no_bullet
+		min-height: 160px
+		padding: 0
+		
+		
+#menu_food
+	margin: 15px auto
+	max-width: 1050px
+	padding: 0
+	width: 98%
+
+	h2, p
+		position: relative
+		text-align: center
+		z-index: 2
+		
+	h2
+		margin: 0 0 30px
+		padding:  0 0 30px
+		position: relative
+		
+		.decor
+			background: #f37e63
+			bottom: 0
+			display: block
+			height: 2px
+			left: 50%
+			margin: 0 0 0 -11px
+			position: absolute
+			width: 22px
+		
+	p
+		font-size: 17px
+		margin: 0 0 15px
+		
+		em
+			color: #f37e63
+			display: block
+			font-style: normal
+			margin: 20px 0 0
+			text-transform: uppercase
+		
+	li.first
+		margin-left: 0
+	
+	li
+		display: inline-block
+		position: relative
+		margin-left: 3.5%
+		padding: 80px 0 0
+		vertical-align: top
+		width: 31%
+		
+	.img
+		background: url(#{$img}sprite_menu.png) center -302px no-repeat
+		display: block
+		height: 210px
+		padding: 60px 0 0
+		position: absolute
+		top: 0
+		z-index: 1
+		width: 100%
+		
+	#food_burrito
+		position: relative
+		
+		
+		.img
+			background-position: center -502px
+			min-width: 358px
+		
+		.icon
+			background: url(#{$img}sprite_menu.png) -240px 0 no-repeat
+			height: 9px
+			left: 50%
+			margin: 0 0 0 -23px
+			position: absolute
+			top: 27px
+			width: 46px
+		
+		
+	#food_plate
+		.img
+			background-position: center -719px
+			
+			
+#marginal_notes
+	background: #f0efef
+	color: #f48365
+	@extend %gotham_book
+	font-size: 14px
+	margin: 0 0 0 -15px
+	padding: 0 15px
+	position: relative
+	text-transform: uppercase
+	
+	.decor
+		background: url(#{$img}sprite_menu.png) -240px 0 no-repeat
+		height: 9px
+		left: 50%
+		margin: 0 0 0 -23px
+		position: absolute
+		top: 50px
+		width: 46px
+	
+	.decor.bottom
+		bottom: 50px
+		top: auto
+
+	.wrap
+		margin: 0 auto 0 15px
+		max-width: 445px
+		padding: 80px 0
+		position: relative
+		width: 90%
+		
+	ul
+		margin: 0
+		padding: 0
+		
+		.icon
+			background: url(#{$img}menu_icons.png) -122px -1690px no-repeat
+			display: block
+			height: 28px
+			left: 3px
+			position: absolute
+			top: 5px
+			width: 27px
+			
+		.icon.h-vegetarian
+			background-position: -120px -478px
+			
+		.icon.vegetarian
+			background-position: -121px -321px
+			
+		.icon.allergy
+			background-position: -124px -1265px
+		
+		.icon.mild
+			background-position: -108px -2336px
+			
+		.icon.medium
+			background-position: -108px -2542px
+		
+		.icon.hot
+			background-position: -108px -2091px
+		
+		
+		li
+			display: inline-block
+			position: relative
+			vertical-align: top
+			width: 33.33%
+			
+			li
+				display: block
+				margin: 0 0 7px
+				padding: 7px 0 15px 40px
+				width: 100%
+
+			li:first-child
+				border-bottom: 1px solid #87736a
+				min-height: 60px
+				
+			.chile
+				li
+					display: inline-block
+					margin: 0 0 0 6px
+					padding: 34px 0 0
+					text-align: center
+					width: 67px
+					
+				.icon
+					left: 50%
+					margin: 0 0 0 -14px
+		
+		
+		li.first
+			padding: 5px 10px 0 0
+		
+		li.second
+			border: 1px solid #87736a
+			border-width: 0 1px
+			padding: 5px 15px 0
+
+		li.third
+			padding: 0
+			text-align: center
+			
+			ul
+				display: inline-block
+			
+			li
+				border: none
+				margin: 0 0 10px
+				min-height: 30px
+				padding: 6px 0 0 45px
+				position: relative
+				text-align: left
+				width: 100%
+
+			li:first-child
+				min-height: 30px
+				
+			.icon
+				left: 30px
+				top: 0
+
+.menu-grid
+	color: #675e61
+	font-size: 11px
+	padding: 0
+
+	h4
+		@extend %gotham_med
+		font-size: 14px
+		margin: 0 0 5px -45px
+		padding: 0 0 0 45px
+		position: relative
+		text-transform: uppercase
+
+		&:before
+			background: url(#{$img}menu_icons.png) -122px 0 no-repeat
+			content: " "
+			display: block
+			height: 10px
+			left: 0
+			position: absolute
+			top: 3px
+			width: 40px
+
+	.vegan
+		h4
+			&:before
+				background-position: -122px -325px
+				height: 13px
+				top: 0
+
+	.vegetarian
+		h4
+			&:before
+				background-position: -122px -482px
+				height: 17px
+				top: 0
+
+	li
+		padding: 0 0 0 45px
+		position: relative
+
+	.prices-title
+		color: #675E61
+		@extend %gotham_med
+		font-size: 12px
+		text-transform: uppercase
+
+	.price
+		color: #F37E63
+		font-size: 14px
+		@extend %gotham_med
+		letter-spacing: -0.08em
+
+		.col-xs-4
+			padding-top: 15px
+
+	.price, .prices-title
+		text-align: center
+
+	.wrap
+		border-bottom: 1px solid #cecece
+		min-height: 125px
+		padding: 20px 0

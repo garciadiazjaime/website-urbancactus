@@ -1,0 +1,48 @@
+{% extends 'layout/base.html' %}
+{% block site_wrapper %}
+	<div id="first_block">
+		<h1>Hola! <span class="hidden">In this restaurant we change the industry for the better</span></h1>
+	</div>
+	<div id="philosophy">
+		<div class="small_container">
+			<h2>Fast and delicious mexican food without regrets</h2>
+			<p>With a lot of hard work, an extensive search for the highest quality ingredients and a lot of fun along the way, we have created <strong>Urban Cactus</strong>  and its unique healthy tacos - based menu, where anyone (from meat lovers to vegans) can enjoy nutritious and deliciously authentic Mexican food, without any of the regrets, in an affordable, fast-casual setting.
+
+			</p>
+			<span id="big_logo"></span>
+		</div>
+	</div>
+
+	<div id="about_slider" class="carousel slide" data-ride="carousel" data-interval="5000">
+		<p>Buen provecho</p>
+		<div class="carousel-inner">
+			<div id="sld_entrada" class="item active">
+			</div>
+			<div id="sld_mostrador" class="item">
+			</div>
+			<div id="sld_bascula" class="item">
+			</div>
+		</div>
+		<a class="left carousel-control" href="#about_slider" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+		<a class="right carousel-control" href="#about_slider" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+		<span class="top_decor"></span><span class="bottom_decor"></span>
+	</div>
+	<div id="about_quote_area">
+		<div  class="small_container">
+			<blockquote>“No single food will make or break good health. <br />
+				But the kinds of food you choose day in and day out
+				have a major impact.” <span>Walter Willet</span>
+			</blockquote>
+		</div>
+	</div>
+	<div id="commitment">
+		<div class="small_container">
+			<h2>Our Commitment</h2>
+			<p>Urban Cactus is committed to promote healthy eating habits by incorporating high quality ingredients and low-fat recipes without sacrificing affordability and the distinctive flavors of our rich Mexican culinary heritage.</p>
+
+			<p>For a list of our awesome ingredients, <a href="/menu/ingredients" title="Check out our ingredients">click here</a>.</p>
+
+			<p>In addition, we are also committed to our customer satisfaction; offering quick and efficient service and a positive environment, all while employing conscious business practices and delivering friendly customer service.</p>
+		</div>
+	</div>
+{% endblock %}

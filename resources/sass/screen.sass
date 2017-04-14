@@ -1,0 +1,428 @@
+/* ----------- SETUP -------------- */	
+@import "compass/css3/border-radius"
+@import "compass/css3/box-shadow"
+@import "compass/css3/box-sizing"
+@import "compass/css3/font-face"
+@import "compass/css3/images"
+@import "compass/css3/opacity"
+@import "compass/css3/text-shadow"
+@import "compass/css3/transition"
+@import "compass/css3/user-interface"
+
+@import "mixins.sass"
+
+$img: "../media/images/"
+
+
+/* ****************** FONTFACE ************** */
+@font-face
+	font-family: 'GothamBlack'
+	src: url('../fonts/gotham_black.eot')
+	src: url('../fonts/gotham_black.eot?#iefix') format('embedded-opentype'), url('../fonts/gotham_black.woff') format('woff'), url('../fonts/gotham_black.ttf') format('truetype'), url('../fonts/gotham_black.svg#GothamBlack') format('svg')
+	font-weight: normal
+	font-style: normal
+	
+@font-face
+	font-family: 'GothamBold'
+	src: url('../fonts/gotham_bold.eot')
+	src: url('../fonts/gotham_bold.eot?#iefix') format('embedded-opentype'), url('../fonts/gotham_bold.woff') format('woff'), url('../fonts/gotham_bold.ttf') format('truetype'), url('../fonts/gotham_bold.svg#GothamBold') format('svg')
+	font-weight: normal
+	font-style: normal
+	
+@font-face
+	font-family: 'GothamBook'
+	src: url('../fonts/gotham_book.eot')
+	src: url('../fonts/gotham_book.eot?#iefix') format('embedded-opentype'), url('../fonts/gotham_book.woff') format('woff'), url('../fonts/gotham_book.ttf') format('truetype'), url('../fonts/gotham_book.svg#GothamBook') format('svg')
+	font-weight: normal
+	font-style: normal
+	
+@font-face
+	font-family: 'GothamLight'
+	src: url('../fonts/gotham_light.eot')
+	src: url('../fonts/gotham_light.eot?#iefix') format('embedded-opentype'), url('../fonts/gotham_light.woff') format('woff'), url('../fonts/gotham_light.ttf') format('truetype'), url('../fonts/gotham_light.svg#GothamLight') format('svg')
+	font-weight: normal
+	font-style: normal
+
+@font-face
+	font-family: 'GothamMedium'
+	src: url('../fonts/gotham_medium.eot')
+	src: url('../fonts/gotham_medium.eot?#iefix') format('embedded-opentype'), url('../fonts/gotham_medium.woff') format('woff'), url('../fonts/gotham_medium.ttf') format('truetype'), url('../fonts/gotham_medium.svg#GothamMedium') format('svg')
+	font-weight: normal
+	font-style: normal
+	
+@font-face
+	font-family: 'GothamXLight'
+	src: url('../fonts/gotham_xlight.eot')
+	src: url('../fonts/gotham_xlight.eot?#iefix') format('embedded-opentype'), url('../fonts/gotham_xlight.woff') format('woff'), url('../fonts/gotham_xlight.ttf') format('truetype'), url('../fonts/gotham_xlight.svg#GothamXLight') format('svg')
+	font-weight: normal
+	font-style: normal
+	
+@font-face
+	font-family: 'MuseoSlab'
+	src: url('../fonts/museo_slab_500.eot')
+	src: url('../fonts/museo_slab_500.eot?#iefix') format('embedded-opentype'), url('../fonts/museo_slab_500.woff') format('woff'), url('../fonts/museo_slab_500.ttf') format('truetype'), url('../fonts/museo_slab_500.svg#MuseoSlab') format('svg')
+	font-weight: normal
+	font-style: normal
+	
+
+%gotham_black
+	font-family: 'GothamBlack', Verdana, sans-serif
+	font-weight: normal
+
+%gotham_bold
+	font-family: 'GothamBold', Verdana, sans-serif
+	font-weight: normal
+
+%gotham_book
+	font-family: 'GothamBook', Verdana, sans-serif
+	font-weight: normal
+	
+%gotham_light
+	font-family: 'GothamLight', Verdana, sans-serif
+	font-weight: normal
+	
+%gotham_med
+	font-family: 'GothamMedium', Verdana, sans-serif
+	font-weight: normal
+	
+%gotham_xlight
+	font-family: 'GothamXLight', Verdana, sans-serif
+	font-weight: normal
+
+%museo
+	font-family: 'MuseoSlab', Arial, sans-serif
+	font-weight: normal
+	
+	
+/* ****************** GENERAL ************** */
+
+html, body
+	@extend %gotham_book
+	margin: 0
+	padding: 0
+	position: relative
+
+body
+	background: #e6f0e1
+	padding: 88px 0 0
+
+h1, h2, h3, h4
+	@extend %gotham_bold
+	font-size: 40px
+	font-weight: normal
+	
+a
+	&:hover, &:active
+		text-decoration: none
+		
+.no-clicks
+	pointer-events: none
+
+.small_line
+	background: #675e61
+	border: none
+	height: 1px
+	margin: 15px auto
+	max-width: 300px
+	width: 80%
+	
+/* ****************** LAYOUT ************** */	
+#wrapper
+	max-width: 100%
+	overflow: hidden
+	width: 100%
+
+#seal
+	background: url(#{$img}tacos_seal.png) center no-repeat
+	height: 182px
+	left: 30px
+	position: fixed
+	top: 40%
+	width: 162px
+	z-index: 5
+	
+.brown_background
+	background: #675e61
+	
+.light_gray
+	background: #f4f4f4
+	
+.small_container
+	margin: 0 auto
+	max-width: 850px
+	width: 95%
+	
+/* ---------- Header --------- */	
+header
+	overflow: hidden
+	position: fixed
+	top: 0
+	width: 100%
+	z-index: 12
+	
+.navbar-brand
+	background: url(#{$img}logo.png) 20px 0 no-repeat
+	background-size: auto 100%
+	display: inline-block
+	height: 48px
+	left: 50%
+	line-height: 5000em
+	margin: 0 0 0 -160px
+	overflow: hidden
+	position: absolute
+	width: 320px	
+	
+.icon-bar
+	background: #e5e97e
+	@include border-radius(4px)
+	height: 4px
+	width: 30px
+	
+.navbar
+	background: #fff
+	margin: 0
+	position: static
+	top: 0
+	width: 100%
+	z-index: 10
+	
+	.container
+		min-height: 86px
+		padding: 17px 0
+		position: relative
+		@include transition(padding 0.5s)
+	
+	.nav
+		a
+			color: #f37e63
+			display: block
+			font-size: 12px
+			letter-spacing: 0.03em
+			text-transform: uppercase
+
+			&:hover, &:active
+				background: url(#{$img}menu_decor.png) center bottom no-repeat
+				color: lighten(#f37e63, 10)
+		li			
+			margin: 0
+			margin-right: 1.5%
+			@include transition(margin-right 0.5s)
+			text-align: center
+			min-width: 10px
+			width: 15%
+			
+		.location
+			margin-right: 0
+			
+		li.active	
+			a
+				background: url(#{$img}menu_decor.png) center bottom no-repeat
+
+	li.index, li.urban-cactus, li.index.active, li.urban-cactus.active
+		background: url(#{$img}logo.png) center 0 no-repeat
+		border: none
+		height: 52px
+		width: 295px
+
+		a
+			display: block
+			height: 100%
+			line-height: 5000em
+			overflow: hidden
+			
+			
+			&:hover, &:active
+				background: transparent
+	
+	.navbar-inner
+		text-align: center
+		
+	.social
+		margin: 0
+		padding: 0
+		position: absolute
+		right: 0
+		text-align: right
+		top: 17px
+		
+		li
+			display: inline-block
+			height: 28px
+			width: 28px
+			
+		a
+			background: url(#{$img}sprite_social.png) 0 0 no-repeat
+			display: block
+			height: 100%
+			line-height: 5000em
+			opacity: 1
+			overflow: hidden
+			width: 100%
+			
+			&:hover
+				background-position: 0 0
+				opacity: .7
+			
+			
+
+.navbar-nav
+	float: none
+	margin: 0 auto
+	max-width: 890px
+	width: 100%
+
+.navbar-nav > li > a
+	padding-top: 5px
+	
+
+#hidden_menu
+	background: #fff
+	@include transition(opacity 0.5s)
+	opacity: 0
+	
+	.brand
+		background-image: url(#{$img}logo_light.png)
+
+	li.index, li.urban-cactus, li.index.active, li.urban-cactus.active
+		background: url(#{$img}logo.png) center 0 no-repeat
+		
+		a
+			&:hover
+				background: transparent
+		
+	li
+		a
+			color: #f37e63
+			
+			&:hover
+				background: url(#{$img}menu_decor.png) center bottom no-repeat
+	
+/*  -----------  Footer ----------- */
+footer
+	background: #fff url(#{$img}footer_cactus.jpg) center bottom no-repeat
+	color: #675e61
+	font-size: 17px
+	padding: 40px 0  50px
+	
+	h4
+		border-bottom: 1px solid #675e61
+		color: #675e61
+		font-size: 11px
+		padding: 0 0 10px
+		text-transform: uppercase
+		
+		a
+			display: block
+			padding: 0 0 0 7px
+	
+	a
+		color: #675e61
+		
+		&:hover
+			color: lighten(#675e61, 10)
+			text-decoration: none
+	
+	.hidden-xs
+		div
+			display: inline-block
+			vertical-align: top
+			margin: 0 3% 0 0
+			width: 22%
+			
+		ul
+			display: inline-block
+			list-style-type: none
+			padding: 0
+			vertical-align: top
+			
+		#footer_menu
+			width: 28%
+			
+			ul
+				width: 49%
+				
+			ul.first
+				margin-right: 2%
+		
+		#footer_about
+			width: 19%
+			
+		#footer_contact
+			margin: 0
+		
+	.visible-xs
+		color: #675e61
+		font-size: 14px
+		
+		h4
+			font-size: 14px
+		
+		a
+			color: #675e61
+			display: block
+			@extend %gotham_bold
+			font-size: 11px
+			margin: 0 0 10px
+			min-height: 20px
+			opacity: 1
+			padding: 50px 0 10px 0
+			@include transition(opacity 0.5s)
+			
+			&:hover
+				opacity: .7
+			
+		a.telephone, a.email
+			background: url(#{$img}phone_contac_icons.png) 0 0 no-repeat
+			
+		a.email
+			background-position: 0 -158px
+			color: #675e61
+			font-size: 11px
+			
+	.social
+		list-style-type: none
+		margin: 10px 0 20px
+		padding: 0
+		
+		li
+			position: relative
+			
+			a
+				display: block
+				padding: 2px 0 4px 40px
+				text-transform: lowercase
+			
+				&:hover
+					.icon
+						background-position: 0 0
+						opacity: .7
+			
+		.icon
+			background: url(#{$img}sprite_social.png) 0 0 no-repeat
+			display: block
+			height: 28px
+			left: 0
+			opacity: 1
+			position: absolute
+			top: 0
+			width: 28px
+
+#footer_logo
+	background: url(#{$img}logo.png) center 0 no-repeat
+	background-size: cover
+	height: 48px
+	margin: 40px auto 110px
+	max-width: 97%
+	width: 292px
+
+.loading-ajax
+	background: url(../media/images/ajax-loader.gif) 0 0 no-repeat
+	background-position: center
+	height: 40px
+	width: 100%
+	
+@import "includes/sections/_home.sass"
+@import "includes/sections/_menu.sass"
+@import "includes/sections/_about_us.sass"
+@import "includes/sections/_location.sass"
+@import "includes/_responsive.sass"

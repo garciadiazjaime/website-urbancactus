@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>{% load staticfiles %}
+	<title>{{title}}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+	<meta name="author" content="http://mintitmedia.com">
+	<meta name="description" content="{{description}}">
+	<link rel="shortcut icon" type="image/png" href="{% static 'media/images/favicon.ico' %}">
+	<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+	<link href="{% static 'css/screen.css' %}?v={{ APP_VERSION }}" rel="stylesheet" type="text/css" />
+	
+</head>
+<body class="{{page}}">
+	<header>
+		{% include 'layout/header.html' %}
+	</header>
+	<section id="wrapper">
+		{% block site_wrapper %}{% endblock %}
+		<div id="seal" class="no-clicks"></div>
+	</section>
+	<footer>
+		{% include 'layout/footer.html' %}
+	</footer>
+	<script src="{% static 'js/jquery-1.10.2.js' %}"></script>
+	<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/form_functions.js' %}?v={{ APP_VERSION }}" ></script>
+	<script src="{% static 'js/functions.js' %}?v={{ APP_VERSION }}" ></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-53997511-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+</html>

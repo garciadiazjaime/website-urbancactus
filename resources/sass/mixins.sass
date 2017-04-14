@@ -1,0 +1,24 @@
+// Mixins ---------------------------------------------------------------
+ 
+=placeholder-style
+	color: #b3b3b3
+	font-size: 12px
+	font-style: normal
+ 
+=apply-placeholders
+	&::-webkit-input-placeholder
+		+placeholder-style
+	&:-moz-placeholder
+		+placeholder-style
+	&::-moz-placeholder
+		+placeholder-style
+	&.placeholder
+		+placeholder-style
+	&:-ms-input-placeholder
+		+placeholder-style
+
+.placeholders
+	+apply-placeholders
+ 
+input, textarea
+	@extend .placeholders

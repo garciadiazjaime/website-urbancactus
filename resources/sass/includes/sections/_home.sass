@@ -1,0 +1,521 @@
+body.home
+	background: #504241
+	padding: 0
+	
+	#wrapper
+		margin: -88px 0 0
+		
+	header
+		position: relative
+		
+.home
+	#hidden_menu
+	
+		.navbar-brand
+			background-image: url(#{$img}logo.png)
+		
+		.social
+			li
+				a:hover
+					background: url(#{$img}sprite_social.png) 0 0 no-repeat
+		
+	.navbar-brand
+		background-image: url(#{$img}logo_light.png)
+		
+	.navbar
+		background: transparent
+		position: static
+		
+		li.index, li.urban-cactus, li.index.active, li.urban-cactus.active
+			background: url(#{$img}logo_light.png) center 0 no-repeat
+			
+			a
+				&:hover, &:active
+					background: transparent
+			
+		li
+			a
+				color: #fff
+				
+				&:hover, &:active
+					background: url(#{$img}menu_decor.png) center 34px no-repeat
+					color: #fff
+					
+		li.active	
+			a
+				background: url(#{$img}menu_decor.png) center 34px no-repeat
+		
+		
+		
+		.social
+
+			a
+				background: url(#{$img}sprite_social.png) 0 0 no-repeat
+
+				&:hover
+					background: url(#{$img}sprite_social.png) 0 0 no-repeat
+
+	#first_block
+		//margin: 0  
+		position: relative
+	
+	#home_slider	
+		height: 632px
+		overflow: hidden
+		
+		.item
+			background:  center top no-repeat
+			background-size: cover
+			min-height: 632px
+			padding: 108px 0 0
+			
+			.container
+				position: relative
+				
+			.big_phrase	
+				left: 0
+				margin: 120px 85px 0 auto
+				min-height: 325px
+				@include transition(.1s)
+				@include transition-timing-function(ease-out)
+				width: 450px
+				
+		.item.active
+			.big_phrase
+				margin-right: 85px
+				opacity: 1
+
+		.prev.left
+			.big_phrase
+				margin-right: -5000px
+				opacity: 1
+
+		.next.right
+			.big_phrase
+				margin-right: 5000px
+				opacity: 1
+				
+		#sld_healthy
+			background-image: url(#{$img}banner/home_tacos.jpg)
+			
+		#sld_guacamole
+			background-image: url(#{$img}banner/home_guacamole.jpg)
+			
+		#sld_fast
+			background-image: url(#{$img}banner/home_burros.jpg)
+					
+		#sld_no-regrets
+			background-image: url(#{$img}banner/home_tacos-aguacate.jpg)
+		
+			
+		.big_phrase	
+			background: transparent !important
+			color: #fff
+			@extend %gotham_bold
+			font-size: 56px
+			line-height: 1em
+			text-align: center
+			text-transform: uppercase
+		
+			p
+				background: url(#{$img}decor_yellow_top.png) center top no-repeat
+				margin: 0
+				padding: 15px 0 0
+			
+			span
+				background: url(#{$img}decor_yellow_bottom.png) center bottom no-repeat
+				display: block
+				padding: 0 0 15px
+			
+		.decor
+			background: url(#{$img}home_banner_decor.png) center bottom no-repeat
+			background-size: 100% 41px
+			bottom: 0
+			height: 41px
+			left: 0
+			position: absolute
+			width: 100%
+			z-index: 2
+	
+			
+/* indicators */			
+.carousel
+	ol
+		right: 185px
+		width: 380px
+		
+	ol.carousel-indicators
+		bottom: 70px
+		left: 50%
+		margin-left: -585px
+		max-width: 100%
+		padding-right: 266px
+		position: absolute
+		text-align: right
+		width: 1170px	
+		z-index: 9
+		
+	
+		li, a
+			background: rgba(255,255,255, .8)
+			border: 2px solid rgb(229,233,126)
+			@include border-radius(25px)
+			display: inline-block
+			height: 15px
+			line-height: 5000em
+			margin: 0 10px 0 0
+			overflow: hidden
+			width: 15px
+		
+		li.active, a.active
+			background: rgba(229,233,126, .8)
+			border: 2px solid rgb(255,255,255)
+	
+		
+	
+#green_area_letter
+	background: #e5e97e 
+	padding: 70px 0 60px
+	text-align: center
+	
+	h2
+		background: url(#{$img}decor_orange_bottom.png) center bottom no-repeat
+		color: #675e61
+		@extend %gotham_bold
+		font-size: 40px
+		margin: 0 0 20px
+		padding: 0 0 30px 
+		text-transform: uppercase
+		
+	p
+		color: #675e61
+		@extend %gotham_book
+		font-size: 30px
+		line-height: 1em
+		margin: 0 auto
+		max-width: 95%
+		width: 800px
+		
+		em
+			color: #f37e63
+			display: block
+			@extend %gotham_med
+			font-style: normal
+			font-size: 24px
+			padding: 15px 0 0
+			text-transform: uppercase
+
+	.small_line.first
+		margin: 100px auto 15px
+		
+		
+	#check_menu
+		margin: 90px auto 0
+	
+		a
+			background: url(#{$img}decor_white_bottom.png) center bottom no-repeat
+			color: #675e61
+			display: block
+			@extend %gotham_bold
+			font-size: 40px
+			padding: 0 0 20px
+			text-transform: uppercase
+		
+			&:hover
+				color: lighten( #675e61, 5)
+				text-decoration: none	
+
+.images_square_list
+	list-style-type: none
+	padding: 0
+
+	li
+		display: inline-block
+		@include box-sizing(border-box)
+		height: 210px
+		padding: 10px
+		width: 50%
+		
+		.wrap
+			display: block
+			height: 199px
+			overflow: hidden
+			position: relative
+			width: 100%
+			
+			&:hover
+				.image_green
+					width: 300px
+			
+	#list_tacos
+		border-bottom: 1px solid #fff
+		border-right: 1px solid #fff
+		
+	#list_burritos
+		border-bottom: 1px solid #fff
+		
+	#list_plate
+		border-right: 1px solid #fff
+
+	.text
+		height: 100%
+		line-height: 5000em
+		overflow: hidden
+		width: 100%
+	
+	.image_brown, .image_green
+		background: url(#{$img}index_list-first_xs.jpg) -58px -5px no-repeat
+		height: 100%
+		left: 50%
+		margin: 0 0 1px -150px
+		position: absolute
+		top: 0
+		width: 300px
+		z-index: 1
+	
+	#list_burritos
+		.image_brown, .image_green
+			background-position: -438px -5px
+	
+	#list_plate
+		.image_brown, .image_green
+			background-position: -58px -217px
+	
+	#list_salads
+		.image_brown, .image_green
+			background-position: -438px -213px
+			
+	.image_green
+		background-image: url(#{$img}index_list-first_hover_xs.jpg) 
+		@include transition(width 1s)
+		width: 0
+		z-index: 3
+	
+#index_menu
+	padding: 10px 0
+	
+#index_menu_light
+	background: #f4f4f4 url(#{$img}index_menu_light.jpg) center 180px no-repeat
+	padding: 80px 0 90px
+	
+	a
+		background: url(#{$img}orange_arrow.png) center bottom no-repeat
+		color: #675e61
+		display: block
+		@extend %museo
+		font-size: 40px
+		padding: 0 0 80px
+		text-align: center
+		text-transform: uppercase
+		
+		span
+			display: block
+			padding: 0 0 20px
+			position: relative
+		
+		span.decor
+			background: url(#{$img}long_green_line.png) 0 0 no-repeat
+			height: 15px
+			left: 50%
+			margin: 0 0 0 -96px
+			@include transition( .5s)
+			width: 0
+			
+		&:hover
+			text-decoration: none
+			
+			span.decor
+				width: 196px
+				
+	
+			
+		
+	
+	ul
+		border-bottom: 4px solid #675e61
+		list-style-type: none
+		margin: 0 auto 110px
+		padding: 0 0 30px
+		
+	li
+		display: inline-block
+		@include box-sizing(border-box)
+		padding: 10px
+		width: 50%
+		
+	#list_fillings
+		border-right: 1px solid #675e61
+		
+	#our_story
+		margin: 0 auto
+		max-width: 500px
+		text-align: center
+		width: 85%
+	
+		a
+			background: url(#{$img}right_brown_arrow.png) right 26px no-repeat
+			color: #f37e63
+			display: inline-block
+			@extend %gotham_bold
+			font-size: 47px
+			padding: 0 90px 0 0
+		
+			&:hover
+				background: url(#{$img}right_brown_arrow.png) right 26px no-repeat
+		
+		span
+			display: inline-block
+			
+		span.decor
+			background: url(#{$img}long_green_line.png) 0 0 no-repeat
+			display: block
+			height: 15px
+			left: 70%
+			margin: 0 0 0 -96px
+			@include transition( .5s)
+			width: 0
+
+		&:hover
+
+			span.decor
+				width: 196px
+			
+#home_commitment
+	background: #e5e97e url(#{$img}home_commitment_background.jpg) center 30px no-repeat
+	color: #675e61
+	font-size: 22px
+	padding: 80px 0
+	text-align: center
+
+	
+	.small_container
+		background:  url(#{$img}decor_white_bottom.png) center top no-repeat
+		max-width: 620px
+		padding: 30px 0 0
+		
+	h2
+		font-size: 40px
+		margin: 0 0 40px
+		text-transform: uppercase
+		
+		a
+			color: #675e61
+			
+			&:hover
+				color: lighten(#675e61, 10)
+				text-decoration: none
+				
+	.more
+		background: url(#{$img}decor_white_bottom.png) center bottom no-repeat
+		padding:  0 0 50px
+		
+		a
+			background: url(#{$img}orange_arrow.png) center bottom no-repeat
+			color: #675e61
+			display: block
+			font-size: 18px
+			margin: 30px 0 0
+			padding: 0 0 50px
+			
+			&:hover
+				color: lighten( #675e61, 10)
+				text-decoration: none
+				
+#location
+	color: #dbecd4
+	@extend %gotham_med
+	font-size: 23px
+	height: 383px
+	overflow: hidden
+	text-align: center
+	max-width: 100%
+	
+	.wrap
+		padding: 30px 0 80px
+
+	h2
+		a
+			background: url(#{$img}decor_yellow_top.png) center bottom no-repeat
+			color: #e5e97e
+			display: block
+			font-size: 40px
+			padding: 0 0 20px
+			
+			&:hover
+				text-decoration: none
+				
+	p.first
+		border: 1px solid #fff
+		border-width: 1px 0
+		color: #dbecd4
+		display: inline-block
+		margin: 15px auto 20px
+		padding: 20px 0
+		
+	#index_map
+		background: url(#{$img}index_map.jpg) 20px 0 no-repeat
+		background-size: auto 100%
+		height: 383px
+		min-width: 677px
+		position: relative
+		width: 100%
+		
+		a
+			color: #fff
+			display: block
+			font-size: 14px
+			height: 100%
+			width: 100%
+			
+			&:hover
+				color: darken(#fff, 15)
+			
+			span
+				bottom: 40px
+				display: inline-block
+				position: absolute
+				right: 10%
+	
+	.telephone
+		color: #dbecd4
+
+		&:hover
+			color: lighten(#dbecd4, 5)
+			text-decoration: none
+
+
+#follow_us_facebook
+	background: #fff
+	color: #f37e63
+	display: block
+	@extend %gotham_bold
+	font-size: 30px
+	margin:  0 auto
+	max-width: 95%
+	width: 800px
+	position: relative
+	text-transform: uppercase
+	
+	&:hover
+		background: #675e61
+		text-decoration: none
+		
+		.icon.facebook
+			background: transparent
+		
+	.decor
+		background: url(#{$img}right_brown_arrow.png) right 23px no-repeat
+		display: inline-block
+		padding: 10px 60px 10px 80px
+		position: relative
+		
+	.icon.facebook
+		background: url(#{$img}sprite_social.png)  0 0 no-repeat
+		display: block
+		height: 28px
+		left: 11px
+		position: absolute
+		top: 17px
+		width: 28px
+		
+ 	

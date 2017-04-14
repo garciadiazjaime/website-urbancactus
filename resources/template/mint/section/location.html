@@ -1,0 +1,53 @@
+{% extends 'layout/base.html' %}
+{% block site_wrapper %}
+	<div id="map">
+		<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=3070+W.+Chapman+Ave.+Suite+C+Orange+CA,+92868&amp;hnear=3070+W+Chapman+Ave,+Orange,+California+92868&amp;t=m&amp;ie=UTF8&amp;hq=&amp;z=14&amp;ll=33.787873,-117.885012&amp;output=embed"></iframe>
+	</div>
+	<div id="directions_form" class="row">
+		<div id="get_directions" class="col-sm-5 col-xs-12">
+			<div class="two_block_wrap">
+				<h2>Get directions</h2>
+				<form method="post" action="" id="directions_form">
+					<input type="text" id="origin" name="origin" lang="en" placeholder="choose a starting point" class="custom_textbox" />
+					<input type="text" id="destination" name="destination" lang="en" placeholder="3070 West Chapman Ave Suite C Orange CA 92"  disabled class="custom_textbox" />
+					<span id="dir_error"></span>
+				</form>
+				<a href="https://maps.google.com/maps?q=3070+W.+Chapman+Ave.+Suite+C+Orange+CA,+92868&amp;hnear=3070+W+Chapman+Ave,+Orange,+California+92868&amp;t=m&amp;ie=UTF8&amp;hq=&amp;z=14&amp;ll=33.787873,-117.885012&amp;source=embed" title="View in google maps" id="get_directions_btn">Get directions</a>
+				
+				<p>3070 W. Chapman Ave. 
+				Suite C<br />
+				Orange CA, 92868<br />
+				<br />
+				<a href="https://maps.google.com/maps?q=3070+W.+Chapman+Ave.+Suite+C+Orange+CA,+92868&amp;hnear=3070+W+Chapman+Ave,+Orange,+California+92868&amp;t=m&amp;ie=UTF8&amp;hq=&amp;z=14&amp;ll=33.787873,-117.885012&amp;source=embed" title="View in google maps" target="_blank" id="gmaps_btn">Find in google maps</a>
+				<a href="tel:7149783000" title="Call us">(714) 978-3000</a></p>
+				<a href="mailto:hola@urbancactus.net" title="Contact us" class="email">hola@urbancactus.net</a>	
+				
+				
+			</div>
+		</div><div id="drop_line" class="col-sm-7 col-xs-12">
+			<div class="two_block_wrap" id="contact">
+				<h1>Contact us</h1>
+				<p>Have a question? Got a comment? Let us know below.</p>
+				
+				<form method="post" action="" id="contact_form">
+					<label>Name</label>
+					<input type="text" id="name" name="name" lang="en"  class="custom_textbox required-input" />
+					<label>Email</label>
+					<input type="email" id="email" name="email" lang="en"  class="custom_textbox required-email" />
+					<label>Message</label>
+					<textarea id="message" class="required-text"></textarea>
+					<div class="row">
+						<div class="col-md-6">
+							<div id="form-msg" class="text-danger text-left"></div>	
+						</div>
+						<div class="col-md-6">
+							<input type="submit"  class="custom_submit" value="Submit" id="contact_form_submit" />
+						</div>
+					</div>
+				</form>
+				
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
