@@ -1,7 +1,7 @@
 UrbanCactus Website
 ====
 
-[![Build Status](https://travis-ci.org/garciadiazjaime/website-focus.svg)](https://travis-ci.org/garciadiazjaime/website-focus)
+[![Build Status](https://travis-ci.org/garciadiazjaime/website-urbancactus.svg)](https://travis-ci.org/garciadiazjaime/website-urbancactus)
 
 Technologies:
 - django
@@ -10,5 +10,5 @@ Package Installation
 `pip install -r requirements.txt`
 
 Run Server
-`cd project`
-`python manage.py runserver`
+`cd wsgi/project/`
+`./manage.py runserver`
