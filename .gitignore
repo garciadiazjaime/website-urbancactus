@@ -1,7 +1,10 @@
 *.pyc
 *.DS_Store
-
-**/.sass-cache
-**/.sass-cache/*
-
-resources/css/includes/*
+.sass-cache
+*.py[co]
+*.sw[po]
+*.bak
+*.orig
+*~
+.project
+.pydevproject
