@@ -1,8 +1,6 @@
 UrbanCactus Website
 ====
 
-[![Build Status](https://travis-ci.org/garciadiazjaime/website-urbancactus.svg)](https://travis-ci.org/garciadiazjaime/website-urbancactus)
-
 Technologies:
 - django
 

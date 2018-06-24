@@ -1,19 +1,11 @@
-/*
-    AUTHOR: MINT IT MEDIA
-    http://mintitmedia.com
-
-    File with MINT functions
-*/
-
-
 var errors = [];
 
 
 function send_message(message_data, form_id, error_div_id){
 	$(error_div_id).html('');
 	$(error_div_id).addClass('loading-ajax');
-	
-	setTimeout(function(){ 
+
+	setTimeout(function(){
 	$.post( "/send_message/", message_data , 'json').done(function( data ) {
             $(error_div_id).removeClass('loading-ajax');
 			if (typeof data.status != 'undefined' && data.status){
@@ -29,7 +21,6 @@ function send_message(message_data, form_id, error_div_id){
 }
 
 /*
-	Author: ofa
 	Function that validates al inputs in div with id=setcion_id
 */
 
@@ -83,9 +74,9 @@ function get_error_list(){
 	var errors_html = '';
 	if ( $.inArray( 'required-field', errors ) > -1 ) {
 		errors_html = errors_html + '<li>Please fill all required fields.</li>'; }
-	if ( $.inArray( 'invalid-email', errors ) > -1 ) { 
+	if ( $.inArray( 'invalid-email', errors ) > -1 ) {
 		errors_html = errors_html + '<li>Please use a valid e-mail address</li>'; }
-	if ( $.inArray( 'empty-vehicle', errors ) > -1 ) { 
+	if ( $.inArray( 'empty-vehicle', errors ) > -1 ) {
 		errors_html = errors_html + '<li>Please fill all required fields</li>'; }
 	errors_html = '<ul>'+errors_html+'</ul>';
 	return errors_html;
